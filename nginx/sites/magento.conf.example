@@ -1,0 +1,12 @@
+server {
+    listen 80;
+
+    #listen 443 ssl;
+    #ssl_certificate /etc/nginx/ssl/default.crt;
+    #ssl_certificate_key /etc/nginx/ssl/default.key;
+
+    server_name laradock.dev;
+    set $MAGE_ROOT /var/www;
+    set $MAGE_DEBUG_SHOW_ARGS 0;
+    include /var/www/nginx.conf.sample;
+}
